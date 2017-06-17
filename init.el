@@ -31,8 +31,6 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     vimscript
-     html
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -40,7 +38,7 @@ values."
      ;; ----------------------------------------------------------------
      helm
      auto-completion
-     ;; better-defaults
+     better-defaults
      emacs-lisp
      (ranger :variables
              ranger-show-preview t)
@@ -60,7 +58,8 @@ values."
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-support t)
-     markdown
+     (markdown :variables
+               markdown-live-preview-engine 'vmd)
      org
      (latex :variables
             latex-enable-auto-fill t
@@ -69,6 +68,8 @@ values."
      (python :variables
              python-enable-yapf-format-on-save t)
      ipython-notebook
+     vimscript
+     html
      (chinese :variables
               chinese-enable-youdao-dict t)
      )
